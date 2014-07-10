@@ -1,0 +1,18 @@
+<div class = "container">
+<h2>New item for your <%= @list.title %> list:</h2>
+
+<%= form_for([@list, @item]) do |f| %>
+
+  <div class="input-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :class => 'form-control' %>
+  </div>
+  <br />
+  <div class="input-group">
+    <%= f.submit "Create", :class => 'btn btn-large btn-info' %>
+  </div>
+  <br />
+<% end %>
+
+<%= link_to 'Back', list_path(@list) %>
+</div>

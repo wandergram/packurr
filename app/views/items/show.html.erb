@@ -1,0 +1,12 @@
+<div class = "container">
+<h2>You've added an item to your <%= @list.title %> list:</h2>
+
+<br />
+  <b>Item:</b>
+  <%= @item.name %> 
+<br /><br />
+
+<%= link_to 'Add Item', new_list_item_path(@list) %> | 
+<%= link_to 'Edit This Item', edit_list_item_path(@list, @item) %> |
+<%= link_to 'Back to This List', list_items_path(@list) %>
+</div>
